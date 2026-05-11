@@ -65,7 +65,7 @@ class HistoryActivity : AppCompatActivity() {
                 val cellA = row.createCell(0)
                 cellA.setCellValue((index + 1).toDouble())
                 val cellC = row.createCell(2)
-                cellC.setCellValue("${item.barcode};${item.value}")
+                cellC.setCellValue("${item.barcode};${item.value};${item.count}")
             }
 
             contentResolver.openOutputStream(uri)?.use { outputStream ->

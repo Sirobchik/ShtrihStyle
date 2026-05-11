@@ -77,31 +77,8 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:text="Значение"
+            android:text="Кол-во"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHistory"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/btnClear"
-        android:layout_below="@id/tableHeader" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnClear"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/bg_button_primary"
-        android:text="Очистить историю"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
-
-</RelativeLayout>

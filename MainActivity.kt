@@ -26,7 +26,12 @@ class MainActivity : AppCompatActivity() {
         if (result.contents != null) {
             val code = result.contents
             val product = database[code] ?: "Не найдено"
-            app.history.add(HistoryItem(code, product))
+            val existing = app.history.find { it.barcode == code }
+            if (existing != null) {
+                existing.count++
+            } else {
+                app.history.add(HistoryItem(code, product))
+            }
             val intent = Intent(this, ResultActivity::class.java).apply {
                 putExtra("BARCODE", code)
                 putExtra("PRODUCT", product)
